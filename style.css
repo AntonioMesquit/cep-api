@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+:root{
+    font-size: 62.5%;
+    --roxo: rgb(49, 45, 100);
+    --roxoclaro: rgb(52, 49, 147);
+    --rosa:rgb(181, 33, 132);
+    
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+    
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--roxoclaro);
+    
+}
+header{
+    color: white;
+    background-color: red;
+    padding: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    
+    
+}
+@keyframes aparecer{
+    0%{
+        transform: translateY(-200%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+header.active{
+    opacity: 1;
+    visibility: visible;
+    animation: aparecer 1s forwards;
+}
+label{
+    font-size: 3rem;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+.card{
+    background-color: var(--roxo);
+    color: white;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 0.3rem;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.421);
+    z-index: 2;
+    width: 35rem;
+
+  
+}
+.but{
+    width: 50%;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    background-color: var(--rosa);
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 1rem;
+}
+.input-cep{
+    outline: none;
+    border: none;
+    text-align: center;
+    padding: 1rem;
+    margin-block: 2rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+}
+.input-cep::placeholder{
+    font-size: 1.5rem;
+    
+}
+.wrapper{
+    background-color: rgb(255, 255, 255);
+    height: 150px;
+    border-radius: 3rem;
+    width: 300px;
+    position: absolute;
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3rem;
+    font-size: 1.4rem;
+    left: 50%;
+    bottom: 34%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    z-index: 1;
+  
+}
+body.active .wrapper{
+    opacity: 1;
+    z-index: 2;
+  
+}
+body.active .card{
+    z-index: 1;
+}
+.menu{
+    height: 2rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+}

@@ -1,2 +1,6 @@
-import { cep } from "./cep.js";
-cep()
+import { Cepe } from "./cep.js"
+const cepFunction = new Cepe();
+cepFunction.handleCepSubmit();
+
+let menu = document.querySelector(".menu")
+menu.addEventListener('click' , cepFunction.clearMenu)

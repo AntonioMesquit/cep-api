@@ -6,19 +6,28 @@
     <title>CEP VIEW</title>
     <link rel="stylesheet" href="style.css">
     <script type="module" src="js/main.js" defer></script>
+    <link href="hamburgers.css rel="stylesheet">
+
 </head>
 <body>
+  <header>
+    <p class="erro-mensage"></p>
+  </header>
 <div class="card">
 <label>Digite seu cep:</label>
-  <input type="number" placeholder="42123-213">
-  <button type="submit">Buscar</button>
+  <input type="text" placeholder="42123-213" class="input-cep">
+  <button type="submit" class="but">Buscar</button>
     <div class="divs">
+
+    </div>
+</div>
+ 
+<div class="wrapper">
+<img src="x.svg" alt="" class="menu">
 <p class="state"></p>
 <p class="city"></p>
 <p class="district"></p>
 <p class="address"></p>
-
-    </div>
 </div>
 </body>
 </html>
